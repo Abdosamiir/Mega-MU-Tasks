@@ -3,43 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Home | Page</title>
   </head>
+  <link rel="stylesheet" href="styles.css" />
   <body>
-    <div class="container">
-      <h4 class="title">Hello i'm abdo!</h4>
-      <p class="text">
-        And i'm a web developer! love to code and play video games
+    <header>
+      <h2>Welcome to my personal website</h2>
+      <p>
+        this website is all about me, my hobbies , and how you can contact me
       </p>
-      <img src="about-1.jpg" alt="main photo" />
-      <table class="table">
-        <caption>
-          Developer Rating
-        </caption>
-        <thead>
-          <td>information</td>
-          <td>details</td>
-        </thead>
-        <tbody>
-          <tr>
-            <td>name</td>
-            <td>abdo samir</td>
-          </tr>
-          <tr>
-            <td>age</td>
-            <td>22 years old</td>
-          </tr>
-          <tr>
-            <td>hobbies</td>
-            <td>football , programming</td>
-          </tr>
-          <tr>
-            <td>occuoation</td>
-            <td>university student</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    </header>
+    <nav class="nav">
+      <ul>
+        <li><a href="about.html">About me </a>|</li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>A Glimpse into my life</h2>
+      <p>here's a short video showing of my favorite activities :</p>
+      <video
+        src="WhatsApp Video 2024-12-02 at 18.15.02_174c52d4.mp4"
+        controls
+        autoplay
+        loop
+        width="30%"
+      ></video>
+      <h2>My favorite music</h2>
+      <p>Here's a piece of music that i enjoy lisening to while coding:</p>
+      <audio controls autoplay loop muted>
+        <source src="" type="audio/mpeg" />
+      </audio>
+    </main>
   </body>
 </html>
