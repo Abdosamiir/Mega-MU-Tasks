@@ -1,0 +1,15 @@
+:root:has(.mode input:checked) {
+  --main-color: #252525;
+  --second-color: #171717;
+  --third-color: #c17e1f;
+  --third-light: #d78c23;
+  --dark: white;
+}
+
+:root:has(.mode:checked) .mode .dark {
+  display: none;
+}
+
+:root:has(.mode:checked) .mode .light {
+  display: block;
+}
