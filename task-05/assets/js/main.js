@@ -97,7 +97,7 @@
         // Add inc to count and output in counter
         counter.innerText = count + Math.ceil(inc);
         // Call function every ms
-        setTimeout(updateCount, 60);
+        setTimeout(updateCount, 100);
       } else {
         counter.innerText = target;
       }
