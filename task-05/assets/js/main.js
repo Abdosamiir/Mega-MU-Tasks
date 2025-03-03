@@ -83,6 +83,29 @@
   window.addEventListener("load", toggleScrollTopButton);
   document.addEventListener("scroll", toggleScrollTopButton);
 
+  const counters = document.querySelectorAll(".counter"); // you can use pure counter library instead of this code https://github.com/srexi/purecounterjs?tab=readme-ov-file
+  const speed = 20; // The lower the slower
+
+  counters.forEach((counter) => {
+    const updateCount = () => {
+      const target = Number(counter.getAttribute("data-target"));
+      const count = Number(counter.innerText);
+      // Lower inc to slow and higher to slow
+      const inc = target / speed;
+      // Check if target is reached
+      if (count < target) {
+        // Add inc to count and output in counter
+        counter.innerText = count + Math.ceil(inc);
+        // Call function every ms
+        setTimeout(updateCount, 60);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCount();
+  });
+
   // Initialize AOS (Animate On Scroll) library
   function initAOS() {
     AOS.init({
@@ -93,14 +116,6 @@
     });
   }
   window.addEventListener("load", initAOS);
-
-  // Initialize GLightbox
-  const glightbox = GLightbox({
-    selector: ".glightbox",
-  });
-
-  // Initialize PureCounter
-  new PureCounter();
 
   // FAQ toggle functionality
   document
