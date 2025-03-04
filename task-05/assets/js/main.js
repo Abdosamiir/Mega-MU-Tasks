@@ -84,7 +84,7 @@
   document.addEventListener("scroll", toggleScrollTopButton);
 
   const counters = document.querySelectorAll(".counter"); // you can use pure counter library instead of this code https://github.com/srexi/purecounterjs?tab=readme-ov-file
-  const speed = 20; // The lower the slower
+  const speed = 20;
 
   counters.forEach((counter) => {
     const updateCount = () => {
@@ -125,22 +125,6 @@
         faqItem.parentNode.classList.toggle("faq-active");
       });
     });
-
-  // Initialize Swiper sliders
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach((swiperElement) => {
-      const config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
-
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
-      }
-    });
-  }
-  window.addEventListener("load", initSwiper);
 
   // Scroll to hash anchor on page load
   window.addEventListener("load", () => {
